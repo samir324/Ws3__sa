@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+.backro{
+  background-color: $pink !important;
+}
+
+.header {
+  padding: 4em;
+  color: white;
+
+
+  &_content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content: space-around;
+
+    .left {
+      width: 50%;
+    }
+
+    h1 {
+      margin-bottom: 1em;
+      font-size: 3em;
+      font-weight: 700;
+      margin-top: 20px;
+    }
+
+    p {
+      margin-bottom: 1em;
+      font-size: medium;
+      font-weight: 600;
+    }
+    .btn_for_login{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    
+    }
+    span{
+      border-bottom: 3px solid $lOrange ;
+      font-size: large;
+      font-weight: 600;
+    }
+
+    .btn-header {
+      //place-self: center;
+      @include btn($orange, 18em);
+      font-size: medium;
+      font-weight: 600;
+      // margin-left: 20px;
+      margin:  .5em;
+    }
+
+    .btnG {
+      @include btn($green, 17em);
+
+    }
+
+
+    .header_img {
+      max-width: 40em;
+      margin: 1em;
+    }
+  }
+}
+
+@media (max-width: 1675px) {
+  * {
+    font-size: 10px;
+  }
+ 
+}
+
+@media (max-width: 1044px) {
+  * {
+    font-size: 10px;
+  }
+  .header {
+    text-align: center;
+
+    img {
+      width: 45em;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    text-align: center;
+
+    .left {
+      min-width: 100%;
+
+    }
+
+    img {
+      width: 33em;
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  * {
+    font-size: 8px;
+    margin: 0;
+  }
+  .header {
+    text-align: center;
+
+    .btn-header {
+      //place-self: center;
+      @include btn($orange, 15 xem);
+      font-size: larger;
+
+    }
+    .btnG {
+      @include btn($green, 17em);
+
+    }
+
+    img {
+      width: 25em;
+    }
+  }
+}
+
+
+.backGreen {
+  // background-color: $green;
+  background: linear-gradient(to left, #f6f1d3, #648880, #395368);
+
+  color: white;
+}
+
+.backOrange {
+  // background-color: $orange;
+  background: linear-gradient(to right, #f6f1d3, #648880, #395368);
+  color: white;
+
+}
+
+.backRed {
+  // background-color: $lPink;
+  background: linear-gradient(to left, #f6f1d3, #648880, #395368);
+  color: white;
+
+}
+.section{
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  @media (max-width:"956px"){
+    height: fit-content;
+  }
+  
+}
+.hide{
+  display: none ;
+}

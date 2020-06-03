@@ -1,0 +1,136 @@
+    <head>
+
+        <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+              integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" rel="stylesheet">
+        <!--    style.css-->
+
+        <style>
+            .vertical-nav {
+                min-width: 17rem;
+                width: 17rem;
+                height: 100vh;
+                position: fixed;
+                top: 0;
+                left: 0;
+                box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+                transition: all 0.4s;
+
+                }
+
+            .page-content {
+                width: calc(100% - 17rem);
+                margin-left: 17rem;
+                transition: all 0.4s;
+
+                }
+
+            /* for toggle behavior */
+
+            #sidebar.active {
+                margin-left: -17rem;
+                }
+
+            #content.active {
+                width: 100%;
+                margin: 0;
+                }
+
+            @media (max-width: 768px) {
+                #sidebar {
+                    margin-left: -17rem;
+                    }
+
+                #sidebar.active {
+                    margin-left: 0;
+                    }
+
+                #content {
+                    width: 100%;
+                    margin: 0;
+                    }
+
+                #content.active {
+                    margin-left: 17rem;
+                    width: calc(100% - 17rem);
+                    }
+                }
+
+        </style>
+    </head>
+
+<body>
+
+<div class="vertical-nav bg-dark " id="sidebar">
+    <div class="py-4 px-3 mb-4 bg-dark">
+        <div class="media-body">
+
+            <!--            Logo Link-->
+
+            <a href="admin.html">
+
+                <div class="rounded-lg w-75 ml-auto mr-auto mb-5 bg-white">
+                    <img alt="" class="m-2" src="">
+                </div>
+            </a>
+            <h4 class="font-weight-white text-center text-muted mb-lg-4">Admin Panel</h4>
+
+
+        </div>
+    </div>
+    <div class="w-50 ml-auto p-2 mr-auto mb-5">
+        <img alt="" class="account-logo" src="">
+    </div>
+    <!--   Links Of each section -->
+
+    <ul class="nav flex-column bg-dark mb-0">
+        <li class="nav-item" id="prods">
+            <a class="nav-link text-light  mb-4 bg-dark" href="#">
+                Products
+            </a>
+        </li>
+        <li class="nav-item" id="cats">
+            <a class="nav-link text-light mb-4  bg-dark" href="#">
+                Categories
+            </a>
+        </li>
+        <li class="nav-item" id="coops">
+            <a class="nav-link text-light mb-4  bg-dark" href="#">
+                Cooperatives
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="page-content p-5" id="content">
+    <!-- Toggle button -->
+    <button class="btn btn-dark bg-dark rounded-pill shadow-sm px-4 mb-4" id="sidebarCollapse" type="button">
+        <small class="text-uppercase font-weight-bold" id="togl"> <<< </small>
+    </button>
+
+    <section class="welcome">
+        <h1 class="card-title text-center" id="admin-title">Welcome to admin panel</h1>
+    </section>
+
+</div>
+
+
+<script crossorigin="anonymous"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script crossorigin="anonymous"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script crossorigin="anonymous"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <script>
+
+			$('#sidebarCollapse').on('click', function () {
+
+				$('#sidebar, #content').toggleClass('active');
+
+			});
+
+    </script>
+</body>
+
